@@ -1,15 +1,14 @@
 $(document).ready(function() {
 	var counter = 1;
-	var $container = $(".tileContainer")
-	$tile = $('<div id="card"><div class="front"></div><div class="back"></div></div>');
+	$tile = $("#card");
 	$tile.find(".front").css("background-image", "url('assets/Card " + counter + " Front.PNG')");
 	$tile.find(".back").css("background-image", "url('assets/Card " + counter + " Back.PNG')");
-	$container.append($tile);
 	$("#card").flip();
 	
 	$(".card-no").text("Card # " + counter);
+	$('.prev').prop('disabled', true);
 
-	$(".previous").click(function(){
+	$(".prev").click(function(){
 		if(counter > 1) {
 			counter --; 
 			$tile.find(".front").css("background-image", "url('assets/Card " + counter + " Front.PNG')");
@@ -17,6 +16,14 @@ $(document).ready(function() {
 			$("#card").flip(false);
 			console.log("counter is" + counter)
 			$(".card-no").text("Card # " + counter);
+		}
+		if (counter == 1) {
+			$('.prev').prop('disabled', true);
+			$('.next').prop('disabled', false);	
+		}
+		else {
+			$('.prev').prop('disabled', false);	
+			$('.next').prop('disabled', false);	
 		}
 	})
 	$(".next").click(function(){
@@ -27,6 +34,14 @@ $(document).ready(function() {
 			$("#card").flip(false);
 			console.log("counter is" + counter)
 			$(".card-no").text("Card # " + counter);
+		}
+		if (counter == 2) {
+			$('.next').prop('disabled', true);
+			$('.prev').prop('disabled', false);	
+		}
+		else {
+			$('.prev').prop('disabled', false);	
+			$('.next').prop('disabled', false);	
 		}
 	})
 
