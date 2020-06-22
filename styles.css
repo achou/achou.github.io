@@ -43,3 +43,11 @@ body {
 .back {
 	 background-size: cover;
 }
+
+#card_number {
+	margin: 0px 10px;
+}
+
+.card-jump {
+	margin: 10px 0px 0px 0px;
+}
