@@ -67,4 +67,10 @@
 	-webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin: 50px;
+}
+
+.button-bar {
+	text-align: center;
+    margin: 10px;
 }
