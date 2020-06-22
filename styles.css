@@ -4,8 +4,8 @@ body {
 }
 
 #card {
-	width: 567px;
-	height: 440px;
+	width: 453px;
+	height: 352px;
 }
 
 .tileContainer{
@@ -34,4 +34,12 @@ body {
 
 .btn {
 	margin: 30px;
+}
+
+.front {
+	 background-size: cover;
+}
+
+.back {
+	 background-size: cover;
 }
